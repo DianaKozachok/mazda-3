@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+            .signup-form h2 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .signup-form input[type="text"],
+            .signup-form input[type="email"],
+            .signup-form input[type="password"],
+            .signup-form input[type="tel"],
+            .signup-form input[type="number"],
+            .signup-form textarea,
+            .signup-form select {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            .signup-form input[type="checkbox"],
+            .signup-form input[type="radio"] {
+                margin-right: 10px;
+            }
+
+            .signup-form button {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 12px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                width: 100%;
+            }
+
+                .signup-form button:hover {
+                    background-color: #45a049;
+                }
+
+            .signup-form .checkbox-container,
+            .signup-form .radio-container {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .signup-form label {
+                font-size: 14px;
+                color: #555;
+                margin-left: 5px;
+            }
+
+            .signup-form p {
+                font-size: 14px;
+                color: #777;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="signup-form">
+        <h2>Реєстрація</h2>
+        <form action="/submit" method="post">
+            <input type="text" name="name" placeholder="Ім'я" required><br>
+            <input type="email" name="email" placeholder="Електронна пошта" required><br>
+            <input type="tel" name="phone" placeholder="Номер телефону"><br>
+            <input type="number" name="age" placeholder="Вік" min="1" max="100"><br>
+            <input type="password" name="password" placeholder="Пароль" required><br>
+            <textarea name="message" placeholder="Повідомлення" rows="3"></textarea><br>
+
+            <div class="checkbox-container">
+                <input type="checkbox" name="agree" value="1" required>
+                <label>Погоджуюсь з умовами</label>
+            </div>
+
+            <div class="radio-container">
+                <input type="radio" name="gender" value="male" required>
+                <label>Чоловіча</label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" name="gender" value="female" required>
+                <label>Жіноча</label>
+            </div>
+
+            <select name="country" required>
+                <option value="" disabled selected>Оберіть країну</option>
+                <option value="ukraine">Україна</option>
+                <option value="poland">Польща</option>
+                <option value="usa">США</option>
+            </select><br>
+
+            <select name="experience" required>
+                <option value="" disabled selected>Оберіть рівень досвіду</option>
+                <option value="beginner">Початківець</option>
+                <option value="intermediate">Середній</option>
+                <option value="expert">Експерт</option>
+            </select><br>
+
+            <button type="submit">Зареєструватися</button>
+        </form>
+        <p>Вже маєте акаунт? <a href="login.html">Увійти</a></p>
+    </div>
+
+</body>
+</html>

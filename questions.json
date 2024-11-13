@@ -1,0 +1,19 @@
+{
+  "questions": [
+    {
+      "question": "Які з перелічених вище автомобілів має найбільшу потужність двигуна?",
+      "options": ["Toyota Camry", "Honda Civic", "BMW 3 Series", "Mercedes-Benz C-Class"],
+      "correct_answer": "Mercedes-Benz C-Class"
+    },
+    {
+      "question": "Яка з перелічених країн є батьківщиною автомобільної марки Audi?",
+      "options": ["Франція", "Італія", "Німеччина", "Японія"],
+      "correct_answer": "Німеччина"
+    },
+    {
+      "question": "Який з автомобільних брендів випускає модель 'Mustang'?",
+      "options": ["Ford", "Chevrolet", "Dodge", "Jeep"],
+      "correct_answer": "Ford"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+/* Обнулення стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок */
+header {
+  background-color: #213733;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Кнопки для соцмереж */
+.social-buttons a {
+    width: 200px;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.telegram {
+    background-color: #0088cc;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стиль для кнопки "Зареєструватися" */
+.styled-register-btn {
+    background-color: transparent; /* Прозорий фон */
+    color: #007bff; /* Колір тексту блакитний */
+    font-size: 18px; /* Великий шрифт */
+    padding: 16px 32px; /* Простір всередині кнопки */
+    border: 2px solid #007bff; /* Блакитний контур */
+    border-radius: 50px; /* Круглі краї кнопки */
+    text-align: center; /* Вирівнювання тексту по центру */
+    text-decoration: none; /* Відключаємо підкреслення */
+    display: inline-block; /* Кнопка не займатиме всю ширину */
+    cursor: pointer; /* Курсор при наведенні */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Анімація при hover */
+    font-weight: bold; /* Жирний шрифт */
+}
+
+    .styled-register-btn:hover {
+        background-color: #007bff; /* Блакитний фон при наведенні */
+        color: white; /* Білий текст при hover */
+        transform: scale(1.05); /* Трохи збільшуємо розмір */
+    }
+
+    .styled-register-btn:active {
+        transform: scale(0.98); /* Зменшуємо розмір при натисканні */
+    }
+
+    .styled-register-btn:focus {
+        outline: none; /* Прибираємо обведення при фокусі */
+    }
+
+
+/* Навігаційне меню */
+.menu {
+  list-style-type: none;
+  background-color: #1d1d1d;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu a:hover {
+  background-color: #333333;
+}
+
+/* Адаптація для екранів шириною до 768px (типово для мобільних пристроїв) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Зменшуємо розмір шрифту для мобільних */
+    }
+
+    header h1 {
+        font-size: 24px; /* Робимо заголовок меншим */
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column; /* Робимо меню вертикальним */
+        padding: 0;
+    }
+
+    .navigation li {
+        margin: 10px 0; /* Додаємо відступи між елементами меню */
+    }
+
+    .sidebar {
+        width: 100%; /* Забезпечуємо, щоб бічна панель займала всю ширину */
+    }
+
+    .car-info, .chapter-table {
+        margin: 20px 0; /* Додаємо відступи між блоками */
+    }
+}
+
+/* Адаптація для екранів шириною до 480px (для мобільних телефонів) */
+@media (max-width: 480px) {
+    .sidebar-image img {
+        width: 100%; /* Зображення буде займати всю ширину */
+    }
+
+    .contacts-item {
+        font-size: 12px; /* Зменшуємо розмір шрифту для мобільних */
+    }
+
+    .styled-register-btn {
+        width: 100%; /* Кнопка займає всю ширину екрану */
+    }
+}
+
+/* Сайдбар */
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sidebar .sidebar-image img {
+  width: 100%;
+  height: auto;
+}
+
+.sidebar .car-info {
+  flex-basis: calc(50% - 20px);
+  margin-top: 20px;
+}
+
+.sidebar .contacts-container {
+  margin-top: 20px;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.sidebar p {
+  margin-bottom: 10px;
+}
+
+/* Форма опитування */
+#surveyForm {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+}
+
+#surveyForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#surveyForm select,
+#surveyForm input[type="date"],
+#surveyForm input[type="time"],
+#surveyForm input[type="week"],
+#surveyForm input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#surveyForm button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#surveyForm button:hover {
+  background-color: #0056b3;
+}

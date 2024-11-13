@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mazda 3">
+    <link rel="apple-touch-icon" href="images/mazda_3_icon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
+    <title>Mazda 3</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Мета-теги для поділу в соцмережах -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.PP.UA/mazda-3">
+    <meta property="og:title" content="Mazda 3">
+    <meta property="og:description" content="Машина Mazda 3 2016 року. Ідеальний стан, комфортна для водія. Деталі, ціна та умови продажу на нашій сторінці.">
+    <meta property="og:image" content="images/mazda_3_image.jpg"> <!-- Ваше зображення для попереднього перегляду -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mazda 3">
+    <meta name="twitter:description" content="Машина Mazda 3 2016 року. Ідеальний стан, комфортна для водія. Деталі, ціна та умови продажу на нашій сторінці.">
+    <meta name="twitter:image" content="images/mazda_3_image.jpg"> <!-- Ваше зображення для Twitter -->
+
+    <meta name="telegram:card" content="summary_large_image">
+    <meta name="telegram:title" content="Mazda 3">
+    <meta name="telegram:description" content="Машина Mazda 3 2016 року. Ідеальний стан, комфортна для водія. Деталі, ціна та умови продажу на нашій сторінці.">
+    <meta name="telegram:image" content="images/mazda_3_image.jpg"> <!-- Ваше зображення для Twitter -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+            .social-buttons a {
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #fff;
+                transition: transform 0.3s, box-shadow 0.3s;
+                display: inline-block;
+                text-align: center;
+            }
+
+                .social-buttons a:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                }
+
+                .social-buttons a.facebook {
+                    background-color: #3b5998;
+                }
+
+                .social-buttons a.twitter {
+                    background-color: #1da1f2;
+                }
+
+                .social-buttons a.whatsapp {
+                    background-color: #25d366;
+                }
+
+                .social-buttons a.telegram {
+                    background-color: #0088cc;
+                }
+
+        .copy-link-btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .copy-link-btn:hover {
+                transform: scale(1.05);
+                background-color: #e67e22;
+            }
+
+        #shareBtn {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 0;
+            display: inline-block;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+            #shareBtn:hover {
+                transform: scale(1.05);
+                background-color: #0056b3;
+            }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+            .container h1 {
+                font-size: 36px;
+                color: #333;
+            }
+
+            .container h2 {
+                color: #444;
+                font-size: 24px;
+            }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+            footer p {
+                margin: 0;
+            }
+
+        /* Стилі для кнопок */
+        .game-button, button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            display: inline-block;
+            margin: 10px;
+        }
+
+            .game-button:hover, button:hover {
+                transform: scale(1.05);
+                background-color: #0056b3;
+            }
+
+        <style >
+        /* Загальні стилі для форми */
+        .survey-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .survey-form h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .survey-form label {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        .survey-form input[type="text"],
+        .survey-form textarea,
+        .survey-form select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+            .survey-form input[type="text"]:focus,
+            .survey-form textarea:focus,
+            .survey-form select:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+
+        .survey-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+            .survey-form button:hover {
+                background-color: #0056b3;
+                transform: scale(1.05);
+            }
+
+            .survey-form button:active {
+                transform: scale(0.98);
+            }
+
+        /* Стилі для відступів та контейнерів */
+        .survey-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .survey-form textarea {
+            resize: vertical;
+        }
+
+        .survey-form select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 width=%2216%22 height=%2216%22%3E%3Cpath d=%22M12.146 5.146a.5.5 0 0 0-.708 0L8 8.793 4.854 5.146a.5.5 0 1 0-.708.708L8 9.707l4.854-4.854a.5.5 0 0 0 0-.708z%22 fill=%22%23aaa%22/%3E%3C/svg%3E') no-repeat right 0.75rem center;
+            background-size: 12px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <nav class="navigation" aria-label="Main Navigation">
+        <ul class="menu">
+            <li><a href="#" onclick="redirectToPage('index.html')">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+            <li> <button class="game-button" onclick="window.location.href='game.html'">Game</button></li>
+            <li><button class="styled-register-btn" onclick="window.location.href='signup.html'">Зареєструватися</button></li>
+            <li><a href="https://yourwebsite.PP.UA" target="_blank">Перейти на мій сайт в новій вкладці</a></li>
+
+        </ul>
+    </nav>
+
+    <script>
+        // Симулюємо дані, які можна отримати з JSON файлу (або завантажити через fetch)
+        const pageData = {
+            "url": "https://yourwebsite.PP.UA/mazda-3",
+            "title": "Mazda 3",
+            "description": "Машина Mazda 3 2016 року. Ідеальний стан, комфортна для водія. Деталі, ціна та умови продажу на нашій сторінці."
+        };
+
+        function copyLink() {
+            const link = window.location.href; // Беремо поточне посилання на сайт
+            navigator.clipboard.writeText(link).then(() => {
+                alert('Посилання скопійоване в буфер обміну!');
+            }).catch((error) => {
+                console.error('Помилка копіювання: ', error);
+            });
+        }
+
+        // Функція для поділу через соціальні мережі
+        function shareOnSocialMedia(platform) {
+            const url = encodeURIComponent(pageData.url);
+            const title = encodeURIComponent(pageData.title);
+            const description = encodeURIComponent(pageData.description);
+
+            let shareUrl = '';
+            switch (platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}: ${description}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://api.whatsapp.com/send?text=${title}: ${description} ${url}`;
+                    break;
+                case 'email':
+                    shareUrl = `mailto:?subject=${title}&body=${description} ${url}`;
+                    break;
+                case 'telegram':
+                    shareUrl = `https://t.me/share/url?url=${url}&text=${title}: ${description}`;
+                    break;
+            }
+            window.open(shareUrl, '_blank');
+        }
+    </script>
+
+    <header>
+        <h1>Mazda 3</h1>
+    </header>
+    <aside class="sidebar">
+        <div class="sidebar-image">
+            <img src="images/mazda_3__539007635f (1).webp" alt="My photo" width="370px" class="my-photo" />
+        </div>
+        <div class="car-info">
+            <div class="read-link">
+                <h2>Перейти тут</h2>
+                <a href="https://auto.ria.com/uk/auto_mazda_3_36129046.html">Дивитися тут</a>
+            </div>
+            <div class="container">
+                <div>
+                    <h2 class="year">Рік випуску</h2>
+                    <p>2016</p>
+                </div>
+                <div>
+                    <h2 class="price">Ціна</h2>
+                    <p>11 500$</p>
+                </div>
+                <div>
+                    <h2>Двигун</h2>
+                    <p>2л, Бензин</p>
+                </div>
+                <div>
+                    <h2>Колір</h2>
+                    <p>Чорний</p>
+                </div>
+                <div>
+                    <h2>Кількість власників</h2>
+                    <p>4</p>
+                </div>
+                <div>
+                    <h2>Пробіг</h2>
+                    <ol class="project-list">
+                        <li class="project-item">82 тис.км</li>
+                        <li class="project-item">52 тис.км</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>Коробка передач</h2>
+                    <ol class="project-list">
+                        <li class="project-item">Автомат</li>
+                        <li class="project-item">Механіка</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>Опис</h2>
+                    <p class="my-descr">Автомобіль в ідеальному стані. Підходить, як для чоловіків, так і для жінок. Дуже комфортно на ньому їздити. Фотографії в салоні та з машиною виходять дуже класні. Машина на зимовій гумі, є також літня гума. ТО проходили вчасно, на розхідниках та запчастинах не було єкономії. Заміна олії кожні 7000 тисяч кілометрів. Двигун, коробка та ходова в повному порядку.</p>
+                </div>
+
+                <div id="contact-section" class="contacts-containner">
+                    <h2 class="sidebar-tittle">Діана</h2>
+                    <h3 class="sidebar-tittle">Контакти:</h3>
+                    <p class="contacts-item">
+                        <span class="contacts-type">C: </span>
+                        <a href="tel:+380930212922" class="contacts-number">+380 930 212 922</a>
+                    </p>
+                    <p class="contacts-item">
+                        <span class="contacts-type">Пошта: </span>
+                        <a href="mailto:dianakozachok35@gmail.com" class="contacts-email">dianakozachok35@gmail.com</a>
+                    </p>
+                    <p class="contacts-item">
+                        <span class="contacts-type">Пошта корпоративна: </span>
+                        <a href="mailto:diana.kozachok@lnu.edu.ua" class="contacts-email">diana.kozachok@lnu.edu.ua</a>
+                    </p>
+                </div>
+
+                <div class="chapter-table">
+                    <h2>Порівняння</h2>
+                    <table>
+                        <tr>
+                            <th>Mazda 3</th>
+                            <th>Ford Fiesta</th>
+                        </tr>
+                        <tr>
+                            <td>104 к.с</td>
+                            <td>120 к.с</td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>47</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- Оновлений HTML для форми -->
+    <div class="survey-form">
+        <h2>Опитування: Ваші враження від сайту</h2>
+        <form id="survey-form" action="" method="POST">
+            <div class="form-group">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Ваші враження:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Напишіть свої враження про сайт..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Оцінка сайту:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Оберіть оцінку</option>
+                    <option value="5">5 (Чудово)</option>
+                    <option value="4">4 (Добре)</option>
+                    <option value="3">3 (Задовільно)</option>
+                    <option value="2">2 (Погано)</option>
+                    <option value="1">1 (Жахливо)</option>
+                </select>
+            </div>
+
+            <button type="submit">Відправити відгук</button>
+        </form>
+    </div>
+
+    <button id="start-test-btn" onclick="window.location.href = 'test.html'">Test</button>
+
+    <main>
+        <!-- Кнопка для поділу через Web Share API -->
+        <button id="shareBtn" onclick="shareSite()">Поділитися сайтом</button>
+
+        <!-- Соціальні кнопки для десктопних браузерів -->
+        <div class="social-buttons">
+            <a href="javascript:void(0)" class="facebook" onclick="shareOnSocialMedia('facebook')">Поділитися на Facebook</a>
+            <a href="javascript:void(0)" class="twitter" onclick="shareOnSocialMedia('twitter')">Поділитися на Twitter</a>
+            <a href="javascript:void(0)" class="whatsapp" onclick="shareOnSocialMedia('whatsapp')">Поділитися через WhatsApp</a>
+            <a href="javascript:void(0)" class="telegram" onclick="shareOnSocialMedia('telegram')">Поділитися через Telegram</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Mazda 3. Всі права захищено.</p>
+    </footer>
+
+
+    <script>
+        const pageData = {
+            "url": "https://yourwebsite.PP.UA/mazda-3",
+            "title": "Mazda 3",
+            "description": "Машина Mazda 3 2016 року. Ідеальний стан, комфортна для водія. Деталі, ціна та умови продажу на нашій сторінці."
+        };
+
+        function copyLink() {
+            const link = window.location.href;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('Посилання скопійоване в буфер обміну!');
+            }).catch((error) => {
+                console.error('Помилка копіювання: ', error);
+            });
+        }
+
+        function shareOnSocialMedia(platform) {
+            const url = encodeURIComponent(pageData.url);
+            const title = encodeURIComponent(pageData.title);
+            const description = encodeURIComponent(pageData.description);
+
+            let shareUrl = '';
+            switch (platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}: ${description}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://api.whatsapp.com/send?text=${title}: ${description} ${url}`;
+                    break;
+                case 'email':
+                    shareUrl = `mailto:?subject=${title}&body=${description} ${url}`;
+                    break;
+                case 'telegram':
+                    shareUrl = `https://t.me/share/url?url=${url}&text=${title}: ${description}`;
+                    break;
+            }
+            window.open(shareUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>

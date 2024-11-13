@@ -1,0 +1,23 @@
+{
+    "name": "Mazda 3",
+    "short_name": "Mazda 3",
+    "description": "Сайт про автомобіль Mazda 3",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "images/mazda_3_icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/mazda_3_icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "scope": "/"
+}
